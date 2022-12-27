@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useGamestate } from "../../context";
+import { useGamestate } from "../../../game/context";
 import PlayerPanel from "./PlayerPanel";
 
 const Container = styled.div`
@@ -8,6 +8,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @media (max-width: 500px) {
+    padding-right: 16px;
+  }
 `
 
 const PlayersPanel = () => {
@@ -16,7 +20,8 @@ const PlayersPanel = () => {
 
   return (
     <Container>
-      { players.map(player => <PlayerPanel player={player} currentTurn={playerTurn === player.id} />) }
+      <h3>Players</h3>
+      { players.map(player => <PlayerPanel player={player} currentTurn={playerTurn === player.id} activePlayer={player.id === state.playerId} key={player.id} />) }
     </Container>
   )
 }

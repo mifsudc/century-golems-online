@@ -1,26 +1,18 @@
 Todo::
 
-Data
-- Finish card entry
+Websocket actions:
+-connect to lobby
+-start game
 
-UI
-- Hand view
-- Player stats
- - Card Icon
- - Gems
+Functionality:
+-Play card modal
+-Buy card modal
+-Buy golem modal
+-Can buy golem logic
+-Game end logic
 
-- Headers
-- Card
- - Gems
-- Golem
- - Gems
+Extensions:
+-discard deck view
+-golem deck view
 
-Command Processor
- - Player join
- - Acquire
- - Rest
- - Play
- - Buy
-
-Websockets
-
+Visual changes:

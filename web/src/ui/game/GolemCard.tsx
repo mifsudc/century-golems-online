@@ -1,12 +1,13 @@
-import { Golem } from "../game/types";
-import { gemsObjectToArray } from "../game/utils";
+import { Golem } from "../../game/types";
+import { gemsObjectToArray } from "../../game/utils";
 import Gems from "./Gems";
 import { CardFrame } from "./shared.styles";
-import golemIcon from "../assets/img/golem.png"
 import styled from "styled-components";
 
 type GolemProps = {
   golem: Golem
+  onClick: () => void
+  disabled: boolean
 }
 
 const Header = styled.div`
@@ -22,9 +23,9 @@ const Icon = styled.img`
   border-radius: 8px;
 `
 
-const GolemCard: React.FC<GolemProps> = ({ golem }: GolemProps) => {
+const GolemCard: React.FC<GolemProps> = ({ golem, onClick, disabled }: GolemProps) => {
   return (
-    <CardFrame>
+    <CardFrame onClick={disabled ? undefined : onClick} disabled={disabled}>
       <Header>
         {/* <Icon src={golemIcon} /> */}
         { golem.value }

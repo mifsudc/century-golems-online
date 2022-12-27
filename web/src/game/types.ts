@@ -8,7 +8,14 @@ export enum GEMS {
   'grey'
 }
 
-export type Resource = Card | Golem;
+export type GemsObj = { [key in GEMS]?: number }
+
+export type CardSlot = {
+  card: Card
+  gems: GemsObj
+}
+
+export type Resource = Card | CardSlot | Golem;
 
 export type Card = {
   id: number
@@ -16,31 +23,23 @@ export type Card = {
   data: CardData
 }
 
-export type CardData = ObtainData | UpgradeData | SwapData ;
+export type CardData = ObtainData | UpgradeData | SwapData;
 
-export type ObtainData = {
-  [key in GEMS]: number
-}
+export type ObtainData = GemsObj;
 
 export type UpgradeData = {
   value: number
 }
 
 export type SwapData = {
-  from: {
-    [key in GEMS]?: number
-  },
-  to: {
-    [key in GEMS]?: number
-  }
+  from: GemsObj
+  to: GemsObj
 }
 
 export type Golem = {
   id: number
   value: number
-  cost: {
-    [key in GEMS]?: number
-  }
+  cost: GemsObj
 }
 
 export type Player = {
@@ -50,5 +49,14 @@ export type Player = {
   hand: Card[]
   discard: Card[]
   golems: Golem[]
+  connectionId: string
   // coins: 
+}
+
+export type SerialisedGameState = {
+  golemDeck: number[]
+  golemStack: number[]
+  cardDeck: number[]
+  cardStack: number[]
+  playerTurn: number
 }

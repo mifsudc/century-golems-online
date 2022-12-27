@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-centurygolemsonline-dev-224311-authRole",
+      "UnauthRoleArn": "arn:aws:iam::754448403639:role/amplify-centurygolemsonline-dev-224311-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::754448403639:role/amplify-centurygolemsonline-dev-224311-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-centurygolemsonline-dev-224311-deployment",
+      "UnauthRoleName": "amplify-centurygolemsonline-dev-224311-unauthRole",
+      "StackName": "amplify-centurygolemsonline-dev-224311",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:754448403639:stack/amplify-centurygolemsonline-dev-224311/06271920-6fdb-11ed-8f47-0a8916d020f2",
+      "AmplifyAppId": "d24c0kdiy7eayk"
+    },
+    "categories": {
+      "hosting": {
+        "S3AndCloudFront": {}
+      }
+    }
+  }
+}

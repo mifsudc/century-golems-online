@@ -1,0 +1,15 @@
+{
+  "name": "ws.carddraw",
+  "version": "1.0.0",
+  "description": "Websocket host for carddraw lobbies",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cory Mifsud",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.715.0",
+    "serverless-http": "^2.5.0"
+  }
+}
